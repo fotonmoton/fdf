@@ -28,7 +28,7 @@ SRC = $(addprefix $(SRCDIR), $(SRC_FILES))
 OBJ = $(addprefix $(OBJDIR), $(OBJ_FILES))
 
 
-INC = -I ./inc -I $(LIBFT_FOLDER) -I $(MLX_FOLDER)
+INC = -I ./inc -I $(LIBFT_FOLDER)includes -I $(MLX_FOLDER)
 
 
 LIBFT = libft.a
@@ -48,7 +48,7 @@ MLX_FOLDER = ./minilibx/
 
 FLAGS = -Werror -Wextra -Wall
 
-CC = clang
+CC = gcc
 
 
 all: $(NAME)
@@ -59,7 +59,7 @@ $(NAME): $(OBJ) $(LIBFT_FOLDER)$(LIBFT) $(MLX_FOLDER)$(MLX)
 $(OBJDIR)%.o : $(SRCDIR)%.c
 	$(CC) $(FLAGS) $(INC) -c $< -o $@  
 
-$(LIBFOLDER)$(LIB):
+$(LIBFT_FOLDER)$(LIBFT):
 	make -C $(LIBFT_FOLDER)
 
 $(MLX_FOLDER)$(MLX):

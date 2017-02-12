@@ -27,7 +27,6 @@
 #include	<sys/shm.h>
 #include	<X11/extensions/XShm.h>
 /* #include	<X11/xpm.h> */
-#include	<bsd/string.h>
 
 #define	MLX_TYPE_SHM_PIXMAP	3
 #define	MLX_TYPE_SHM		2

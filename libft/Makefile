@@ -82,7 +82,7 @@ SRC = ft_memset.c		\
 
 OBJ = $(SRC:.c=.o)
 INC = -I ./includes/
-CC = clang
+CC = gcc
 FLAGS = -Werror -Wextra -Wall
 
 all: $(NAME)
